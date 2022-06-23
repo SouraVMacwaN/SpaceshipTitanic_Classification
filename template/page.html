@@ -1,0 +1,358 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict which passengers are transported to an alternate dimension</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header">
+                <h2>Prediction of which passengers are transported to an alternate dimension</h2>
+            </div>
+        </div>
+    </nav>
+
+    <div class = "texts">
+    <br>The Spaceship Titanic was an interstellar passenger liner launched a month ago. With almost 13,000 passengers on board, the vessel set out on its maiden voyage transporting emigrants from our solar system to three newly habitable exoplanets orbiting nearby stars.
+<br>
+While rounding Alpha Centauri en route to its first destination—the torrid 55 Cancri E—the unwary Spaceship Titanic collided with a spacetime anomaly hidden within a dust cloud. Sadly, it met a similar fate as its namesake from 1000 years before. Though the ship stayed intact, almost half of the passengers were transported to an alternate dimension!
+    </div>
+    <br><br><br>
+    <h3>{{ prediction_text }}</h3>
+    <br>
+    <br>
+    <div class="container">
+        <h4>General Info</h4>
+        <br>
+        <form action="\predict" method="post">
+
+
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">CryoSleep</h5>
+                            <select name="CryoSleep" id="CryoSleep" required="required">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <br>
+                <br>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Destination</h5>
+                            <select name="Destination" id="Destination" required="required">
+                                <option value="1">TRAPPIST-1e</option>
+                                <option value="2">55 Cancri e</option>
+                                <option value="3">PSO J318.5-22</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Age</h5>
+                            <input type="text" name="Age" id="Age">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">VIP</h5>
+                            <select name="VIP" id="VIP" required="required">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="width: 33.8rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">Home Planet</h5>
+                            <select name="HomePlanet" id="HomePlanet" required="required">
+                                <option value="Earth">Earth</option>
+                                <option value="Europa">Europa</option>
+                                <option value="Mars">Mars</option>
+                            </select>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <h4>Billing Info (Cost)</h4>
+            <br>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Room Service</h5>
+                            <input type="text" name="RoomService" id="RoomService">
+                            
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Food Court</h5>
+                            <input type="text" name="FoodCourt" id="FoodCourt">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Shopping Mall</h5>
+                            <input type="text" name="ShoppingMall" id="ShoppingMall">
+                            
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="col">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Spa</h5>
+                            <input type="text" name="Spa" id="Spa">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="width: 33.8rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">VR Deck</h5>
+                            <input type="text" name="VRDeck" id="VRDeck">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <!-- Submit -->
+        <input type="submit" value="Submit" class="btn">
+        </form>
+
+        <br>
+        <br>
+
+        <style>
+            body {
+                width: 100%;
+                height: 100vh;
+                /* display: flex; */
+                align-items: center;
+                justify-content: center;
+                background-size: 300% 330%;
+                background-image: linear-gradient(
+                      -45deg, 
+                      rgba(59,173,227,1) 0%, 
+                      rgba(87,111,230,1) 25%, 
+                      rgba(152,68,183,1) 51%, 
+                      rgba(255,53,127,1) 100%
+                );  
+                animation: AnimateBG 20s ease infinite;
+              }
+              
+              @keyframes AnimateBG { 
+                0%{background-position:0% 50%}
+                50%{background-position:100% 50%}
+                100%{background-position:0% 50%}
+              }
+            
+            
+            .navbar {
+                height: 100px;
+                background-color: #292727;
+                color : rgb(164, 156, 156)
+                
+            }
+            
+            .card {
+                background-color: rgb(77, 27, 97);
+                border-radius: 30px;
+                box-shadow: 0 10px 10px -2px rgb(45, 17, 56);
+            }
+            
+            #Age {
+                border-radius: 30px;
+                background-color: rgb(106, 27, 138);
+                border-color: aquamarine;
+                border-width: 3px;
+                color : white;
+                
+            }
+            
+            #Cryosleep {
+                border-radius: 30px;
+                background-color: rgb(106, 27, 138);
+                border-color: aquamarine;
+                border-width: 3px;
+                color : white;
+            }
+            
+            #Destination {
+                border-radius: 30px;
+                background-color: rgb(106, 27, 138);
+                border-color: aquamarine;
+                border-width: 3px;
+                color : white;
+            }
+            
+            #VIP {
+                border-radius: 30px;
+                background-color: rgb(106, 27, 138);
+                border-color: aquamarine;
+                border-width: 3px;
+                color : white;
+            }
+            
+            #HomePlanet {
+                border-radius: 30px;
+                background-color: rgb(106, 27, 138);
+                border-color: aquamarine;
+                border-width: 3px;
+                color : white;
+            }
+            
+            #RoomService {
+                border-radius: 30px;
+                background-color: rgb(106, 27, 138);
+                border-color: aquamarine;
+                border-width: 3px;
+                color : white;
+            }
+            
+            #FoodCourt {
+                border-radius: 30px;
+                background-color: rgb(106, 27, 138);
+                border-color: aquamarine;
+                border-width: 3px;
+                color : white;
+            }
+            
+            #ShoppingMall {
+                border-radius: 30px;
+                background-color: rgb(106, 27, 138);
+                border-color: aquamarine;
+                border-width: 3px;
+                color : white;
+            }
+            
+            #Spa {
+                border-radius: 30px;
+                background-color: rgb(106, 27, 138);
+                border-color: aquamarine;
+                border-width: 3px;
+                color : white;
+            }
+            
+            #VRDeck {
+                border-radius: 30px;
+                background-color: rgb(106, 27, 138);
+                border-color: aquamarine;
+                border-width: 3px;
+                color : white;
+                
+            }
+            
+            h4 {
+                color: aliceblue;
+            }
+            
+            .btn{
+                color: #381a45;
+                background-color: beige;
+                border-color:#381a45;
+                border-radius: 15px;
+                border-width: 3px;
+                display: grid;
+                margin: auto; 
+                height: 50px; 
+                width: 150px;
+            }
+            
+            .btn:hover{
+                background-color: #381a45;
+                border-color: beige;
+                border-width: 3px;
+                color :beige
+            }
+            
+            h3 {
+                text-align: center; 
+            }
+            
+            h5 {
+                color: aquamarine;
+            }
+
+            .texts {
+                background-color: #342e2e;
+                text-align: center;
+                height: 150px;
+                color: rgb(163, 232, 209);
+                padding: 5px;
+            }
+            p {
+                text-align: center;
+            }
+        </style>
+
+    </div>
+    
+<p><font size="4" color=white>Sourav Macwan 2022</font></p>
+
+
+</body>
+
+</html>
