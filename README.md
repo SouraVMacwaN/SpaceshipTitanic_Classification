@@ -1,11 +1,11 @@
 ### Hosted link : 
 [https://space-pred.herokuapp.com/](https://space-pred.herokuapp.com/)
 
-# Screen-shots :
+### Screen-shots :
 
-![img 1](/screenshots/Screenshot 2022-06-24 200333.jpg)
+![/Screenshot 2022-06-24 200333.jpg](/Screenshot 2022-06-24 200333.jpg)
 
-![img 2](/screenshots/Screenshot 2022-06-24 200414.jpg)
+![](/Screenshot 2022-06-24 200414.jpg)
 
 ### Technologies Used
 
