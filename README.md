@@ -1,5 +1,3 @@
-### Hosted link : 
-[https://space-pred.herokuapp.com/](https://space-pred.herokuapp.com/)
 ### Screenshots :
 
 
